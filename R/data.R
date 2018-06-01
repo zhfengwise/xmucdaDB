@@ -123,3 +123,67 @@
 #' @usage data(deathpenalty2)
 #'
 "deathpenalty2"
+
+
+
+#' 打鼾与心脏病 (Snoring and Heart Disease)
+#'
+#' @usage data(snoring_heartdisease)
+#'
+"snoring_heartdisease"
+
+
+
+#' 母鲎数据 (Female Horseshoe Crabs)
+#'
+#' @usage data(horseshoecrabs)
+#'
+"horseshoecrabs"
+
+
+
+#' 英国的火车事故 (British Train Accidents over Time)
+#'
+#' @usage data(traincollisions)
+#'
+"traincollisions"
+
+
+
+#' 收入与是否拥有旅行信用卡 (Relation Between Income and Whether One Possesses a Travel Credit Card)
+#'
+#' @usage data(creditcard)
+#'
+"creditcard"
+
+
+
+#' 癌症缓解 (Cancer Remission)
+#'
+#' @usage data(cancer_remission)
+#'
+"cancer_remission"
+
+
+
+#' 晶片瑕疵 (Chip Imperfection)
+#'
+#' @usage data(chip_imperfection)
+#'
+"chip_imperfection"
+
+
+
+#' 足球联赛观赛人数与被捕人数 (Total Attendance and Total Number of Arrests in Football League)
+#'
+#' @usage data(football_arrest)
+#'
+"football_arrest"
+
+
+
+#' 吸烟与冠心病死亡 (Smoking and Coronary Deaths)
+#'
+#' @usage data(smoking_cd)
+#'
+"smoking_cd"

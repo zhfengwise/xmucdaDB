@@ -163,3 +163,144 @@ deathpenalty2 <- data.frame(
 deathpenalty2 <- to_table(deathpenalty2)
 use_data(deathpenalty2)
 
+
+
+# 打鼾与心脏病
+snoring_level <- c("Never","Occasional","Nearly every night","Every night")
+snoring_heartdisease <- data.frame(
+  Heartdisease = rep(c("Yes", "No"), each = 4),
+  Snoring = factor(rep(snoring_level, times = 2), levels = snoring_level),
+  Freq = c(24, 35, 21, 30, 1355, 603, 192, 224)
+)
+snoring_heartdisease <- to_table(snoring_heartdisease)
+use_data(snoring_heartdisease)
+
+
+
+# 母鲎数据
+data("horseshoecrabs")
+use_data(horseshoecrabs)
+
+
+
+# 英国火车碰撞事故
+data("traincollisions")
+use_data(traincollisions)
+
+
+
+
+# 收入与是否拥有旅行信用卡
+creditcard<- read.csv(text = "
+  Income,No.Cases,Creditcards
+  24,1,0
+  34,7,1
+  48,1,0
+  70,5,3
+  27,1,0
+  35,1,1
+  49,1,0
+  79,1,0
+  28,5,2
+  38,3,1
+  50,10,2
+  80,1,0
+  29,3,0
+  39,2,0
+  52,1,0
+  84,1,0
+  30,9,1
+  40,5,0
+  59,1,0
+  94,1,0
+  31,5,1
+  41,2,0
+  60,5,2
+  120,6,6
+  32,8,0
+  42,2,0
+  65,6,6
+  130,1,1
+  33,1,0
+  45,1,1
+  68,3,3"
+)
+creditcard <- arrange(creditcard, Income)
+use_data(creditcard)
+
+
+
+# 癌症缓解
+cancer_remission <- read.csv(text = "
+  LI,No.Cases,No.Remission
+  8,2,0
+  18,1,1
+  28,1,1
+  10,2,0
+  20,3,2
+  32,1,0
+  12,3,0
+  22,2,1
+  34,1,1
+  14,3,0
+  24,1,0
+  38,3,2
+  16,3,0
+  26,1,1"
+)
+cancer_remission <- arrange(cancer_remission, LI)
+use_data(cancer_remission)
+
+
+
+# 晶片瑕疵
+chip_imperfection <- data.frame(
+ Imperfections = c(8, 7, 6, 6, 3, 4, 7, 2, 3, 4, 9, 9, 8, 14, 8, 13, 11, 5, 7, 6),
+ Treatment = rep(c("A", "B"), each = 10),
+ z = rep(0:1, each = 5, times = 2)
+)
+use_data(chip_imperfection)
+
+
+
+# 足球联赛一个赛季观赛人数与被捕人数
+football_arrest <- read.csv(text = '
+  Team,Attendance,Arrests
+  "Aston Villa",404,308
+  "Shrewsbury",108,68
+  "Bradford City",286,197
+  "Swindon Town",210,67
+  "Leeds United",443,184
+  "Sheffield Utd",224,60
+  "Bournemouth",169,149
+  "Stoke City",211,57
+  "West Brom",222,132
+  "Barnsley",168,55
+  "Hudderfield",150,126
+  "Millwall",185,44
+  "Middlesbro",321,110
+  "Hull City",158,38
+  "Birmingham",189,101
+  "Manchester City",429,35
+  "Ipswich Town",258,99
+  "Plymouth",226,29
+  "Leicester City",223,81
+  "Reading",150,20
+  "Blackburn",211,79
+  "Oldham",148,19
+  "Crystal Palace",215,78'
+)
+use_data(football_arrest)
+
+
+
+
+# 吸烟与冠心病死亡
+smoking_cd <- data.frame(
+  Age = factor(c("35-44", "45-54", "55-64", "65-74", "75-84")),
+  Person_Nonsmokers = c(18793, 10673, 5710, 2585, 1462),
+  Person_Smokers = c(52407, 43248, 28612, 12663, 5317),
+  Death_Nonsmokers = c(2, 12, 28, 28, 31),
+  Death_Smokers = c(32, 104, 206, 186, 102)
+)
+use_data(smoking_cd)
