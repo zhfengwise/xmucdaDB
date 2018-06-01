@@ -1,7 +1,7 @@
 Package: xmucdaDB
 Type: Package
 Title: Data of "An Introduction to Categorical Data Analysis, 2nd edition by Alan Agresti"
-Version: 0.1.0
+Version: 0.2.0
 Author: Who wrote it
 Maintainer: The package maintainer <yourself@somewhere.net>
 Description: Data of "An Introduction to Categorical Data Analysis, 2nd edition by Alan Agresti". 
