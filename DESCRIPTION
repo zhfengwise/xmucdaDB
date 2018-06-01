@@ -1,0 +1,15 @@
+Package: xmucdaDB
+Type: Package
+Title: Data of "An Introduction to Categorical Data Analysis, 2nd edition by Alan Agresti"
+Version: 0.1.0
+Author: Who wrote it
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: Data of "An Introduction to Categorical Data Analysis, 2nd edition by Alan Agresti"
+License: GPL-3 + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Suggests: knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr
+RoxygenNote: 6.0.1
