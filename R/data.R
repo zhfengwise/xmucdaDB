@@ -283,3 +283,106 @@
 #' @usage data(job_satisfaction_survey)
 #'
 "job_satisfaction_survey"
+
+
+
+#' 佛罗里达大学的研究生入学 (Graduate Admissions at the University of Florida)
+#'
+#' @usage data(UFAdmissions)
+#'
+"UFAdmissions"
+
+
+
+#' 心脏病与血压的关系 (Heart Disease and Blood Pressure)
+#'
+#' @usage data(blood_pressure)
+#'
+"blood_pressure"
+
+
+
+#' 治疗中心、治疗方案与响应3 (Clinic, Treatment and Response III)
+#'
+#' @usage data(treatment3)
+#'
+"treatment3"
+
+
+
+#' 晋升能力与种族 (Promotion Ability and Race)
+#'
+#' @usage data(promotion_race)
+#'
+"promotion_race"
+
+
+
+#' 婚前性行为 (Premarital Sex)
+#'
+#' @usage data(premarital_sex)
+#'
+"premarital_sex"
+
+
+
+#' 信用评分 (Credit Score)
+#'
+#' @description 来自Fahrmeir包中的credit数据集，可查看相应的帮助页面以获取变量信息
+#'
+#' @usage data(credit_score)
+#'
+"credit_score"
+
+
+
+#' 伦敦失踪人口 (Missing Persons in London)
+#'
+#' @usage data(missing_persons)
+#'
+"missing_persons"
+
+
+
+#' 中国的吸烟与肺癌数据 (Smoking and Lung Cancer in China)
+#'
+#' @usage data(smoking_lungcancer_cn)
+#'
+"smoking_lungcancer_cn"
+
+
+
+#' 加州大学伯克利分校研究生录取 (Graduate Admissions at the University of California, Berkeley)
+#'
+#' @description 来自datasets包中的UCBAdmissions数据集，可查看相应的帮助页面以获取变量信息
+#'
+#' @usage UCBAdmissions
+#'
+"UCBAdmissions"
+
+
+
+#' 兔子与青霉素 (Rabbits and Penicillin)
+#'
+#' @usage data(rabbit_penicillin)
+#'
+"rabbit_penicillin"
+
+
+
+#' 非转移骨肉瘤 (Nonmetastatic Osteosarcoma)
+#'
+#' @usage data(osteosarcoma)
+#'
+"osteosarcoma"
+
+
+
+#' 个人使用药物后是否失禁 (Whether a Subject Became Incontinent After Received a Drug)
+#'
+#' @usage data(incontinent)
+#'
+"incontinent"
+
+
+

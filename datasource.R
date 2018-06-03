@@ -462,3 +462,142 @@ job_satisfaction_survey <- data.frame(
 job_satisfaction_survey <- to_table(job_satisfaction_survey)
 use_data(job_satisfaction_survey)
 
+
+
+# 佛罗里达大学的研究生入学
+data("UFAdmissions")
+UFAdmissions <- to_table(UFAdmissions)
+use_data(UFAdmissions)
+
+
+
+
+# 心脏病与血压的关系
+blood_pressure <- data.frame(
+  BloodPressure = c(1:6 * 10 + 101.5, 176.5, 191.5),
+  SampleSize = c(156, 252, 284, 271, 139, 85, 99, 43),
+  ObservedDisease = c(3, 17, 12, 16, 12, 8, 16, 8)
+)
+use_data(blood_pressure)
+
+
+
+
+# 治疗结果
+treatment3 <- data.frame(
+  Center = rep(1:5, each = 4),
+  Treatment = rep(c("Active drug", "Placebo"), times = 10),
+  Pesponse = rep(c("Success", "Success", "Failure", "Failure"), times = 5),
+  Freq = c(0, 0, 5, 9, 1, 0, 12, 10, 0, 0, 7, 5, 6, 2, 3, 6, 5, 2, 9, 12)
+)
+treatment3 <- to_table(treatment3)
+use_data(treatment3)
+
+
+
+
+# 晋升能力与种族
+promotion_race <- data.frame(
+  Race = c("Black", "White", "Black", "White"),
+  Promotion = c("Yes", "Yes", "No", "No"),
+  July = c(0, 4, 7, 16),
+  August = c(0, 4, 7, 13),
+  September = c(0, 2, 8, 13)
+)
+use_data(promotion_race)
+
+
+
+
+# 婚前性行为
+premarital_sex <- data.frame(
+  ReligiousService = rep(c("at most a few times a year", "at least several times a year"), each = 2, times = 6),
+  PoliticalViews = rep(c("Liberal", "Moderate", "Conservative"), each = 8),
+  BirthControl = rep(c("Agree", "Disagree"), times = 12),
+  PremaritalSex = rep(c("wrong only sometimes or not wrong at all", "always or almost always wrong"), each = 4, times = 3),
+  Freq = c(
+    99, 15, 73, 25, 8, 4, 24, 22,
+    73, 20, 87, 37, 20, 13, 50, 60,
+    51, 19, 51, 36, 6, 12, 33, 88
+  )
+)
+premarital_sex <- to_table(premarital_sex)
+use_data(premarital_sex)
+
+
+
+
+# 信用评分
+data(credit, package = "Fahrmeir")
+credit_score <- credit
+use_data(credit_score)
+
+
+# 伦敦失踪人口
+data("missingpersons")
+missing_persons <- missingpersons
+names(missing_persons) <- Hmisc::capitalize(names(missing_persons))
+use_data(missing_persons)
+
+
+# 中国的吸烟与肺癌数据
+data("smokinglungcancer")
+smoking_lungcancer_cn <- smokinglungcancer
+use_data(smoking_lungcancer_cn)
+
+
+
+# 加州大学伯克利分校研究生录取
+data(UCBAdmissions)
+use_data(UCBAdmissions)
+
+
+
+
+# 兔子与青霉素
+rabbit_penicillin <- data.frame(
+  PenicillinLevel = rep(c(0.125, 0.25, 0.5, 1, 4), each = 2),
+  Delay = rep(c("None", "1.5 h"), times = 5),
+  No.Cured = c(0, 0, 3, 0, 6, 2, 5, 6, 2, 5),
+  No.Died = c(6, 5, 3, 6, 0, 4, 1, 0, 0, 0)
+)
+use_data(rabbit_penicillin)
+
+
+
+
+# 非转移骨肉瘤
+osteosarcoma <- data.frame(
+  Infiltration = rep(c("High", "Low"), each = 4),
+  Sex = rep(c("Female", "Male"), each = 2, times = 2),
+  Pathology = rep(c("No", "Yes"), times = 4),
+  No.DiseaseFree_Yes = c(3, 2, 4, 1, 5, 3, 5, 6),
+  No.DiseaseFree_No = c(0, 0, 0, 0, 0, 2, 4, 11)
+)
+use_data(osteosarcoma)
+
+
+
+
+# 个人使用药物后是否失禁
+incontinent <- read.csv(text = "
+  y, x1, x2, x3
+  0, −1.9, −5.3, −43
+  0, −1.5, 3.9, −15
+  0, −0.1, −5.2, −32
+  0, 0.5, 27.5, 8
+  0, 0.8, −3.0, −12
+  0, 0.8, −1.6, −2
+  0, 0.9, 3.4, 1, 0, 2.3, 23.4, 14
+  1, −5.6, −13.1, −1, 1, −5.3, −19.8, −33
+  1, −2.4, 1.8, −9
+  1, −2.3, −7.4, 4
+  1, −2.0, −5.7, −7
+  1, −1.7, −3.9, 13
+  1, −0.6, −2.4, −7
+  1, −0.5, −14.5, −12
+  1, −0.1, −10.2, −5
+  1, −0.1, −9.9, −11, 1, 0.4, −17.2, −9
+  1, 0.7, −10.7, −10, 1, 1.1, −4.5, −15"
+)
+use_data(incontinent)
