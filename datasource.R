@@ -61,14 +61,14 @@ use_data(deathpenalty)
 
 
 # 治疗方案
-treatment <- data.frame(
+treatment1 <- data.frame(
   Clinic = rep(c("1", "2"), each = 2, times = 2),
   Treatment = rep(c("A", "B"), times = 4),
   Response = rep(c("Success", "Failure"), each = 4),
   Freq = c(18, 12, 2, 8, 12, 8, 8, 32)
 )
-treatment <- to_table(treatment)
-use_data(treatment)
+treatment1 <- to_table(treatment1)
+use_data(treatment1)
 
 
 
@@ -304,3 +304,161 @@ smoking_cd <- data.frame(
   Death_Smokers = c(32, 104, 206, 186, 102)
 )
 use_data(smoking_cd)
+
+
+
+
+# AZT的使用与AIDS
+data("AZT")
+AZT <- to_table(AZT)
+use_data(AZT)
+
+
+
+# 飞行温度与是否受热遇险
+temperature_distress <- read.csv(text = "
+  Ft,Temperature,TD
+  1,66,0
+  13,67,0
+  2,70,1
+  14,53,1
+  3,69,0
+  15,67,0
+  4,68,0
+  16,75,0
+  5,67,0
+  17,70,0
+  6,72,0
+  18,81,0
+  7,73,0
+  19,76,0
+  8,70,0
+  20,79,0
+  9,57,1
+  21,75,1
+  10,63,1
+  22,76,0
+  11,70,1
+  23,58,1
+  12,78,0"
+)
+temperature_distress <- arrange(temperature_distress, Ft)
+use_data(temperature_distress)
+
+
+
+# 是否出现驼背与以月计算的年龄
+kyphosis_age <- data.frame(
+  Kyphosis = c(rep("Yes", 18), rep("No", 22)),
+  Age = c(
+    12, 15, 42, 52, 59, 73, 82, 91, 96, 105, 114, 120, 121, 128,
+    130, 139, 139, 157, 1, 1, 2, 8, 11, 18, 22, 31, 37, 61, 72,
+    81, 97, 112, 118, 127, 131, 140, 151, 159, 177, 206
+  )
+)
+use_data(kyphosis_age)
+
+
+
+
+# 绩效工资与种族
+merit_pay_race <- data.frame(
+  District = rep(c("NC", "NE", "NW", "SE", "SW"), each = 4),
+  MeritPay = rep(c("Yes", "No"), times = 10),
+  Race = rep(c("Black", "White"), each = 2, times = 5),
+  Freq = c(24, 9, 47, 12, 10, 3, 45, 8, 5, 4, 57, 9, 16, 7, 54, 10, 7, 4, 59, 12)
+)
+merit_pay_race <- to_table(merit_pay_race)
+use_data(merit_pay_race)
+
+
+
+# 饮酒与Meyers-Briggs人格测验
+data("MBdrink")
+MBdrink <- rename(MBdrink, Freq = Count)
+MBdrink <- to_table(MBdrink)
+use_data(MBdrink)
+
+
+
+# 治疗方案
+treatment2 <- data.frame(
+  Response = rep(c("Success", "Failure"), times = 16),
+  Center = rep(as.character(1:8), each = 4),
+  Treatment = rep(c("Drug", "Control"), each = 2, times = 8),
+  Freq = c(11, 25, 10, 27, 16, 4, 22, 10, 14, 5, 7, 12, 2, 14, 1, 16, 6, 11, 0, 12, 1, 10, 0, 10, 1, 4, 1, 8, 4, 2, 6, 1)
+)
+treatment2 <- to_table(treatment2)
+use_data(treatment2)
+
+
+
+# 喉咙痛
+data("throat")
+use_data(throat)
+
+
+
+# 青少年与性行为
+teen_sex <- data.frame(
+  Race = rep(c("White", "Black"), each = 4),
+  Gender = rep(c("Male", "Female"), each = 2, times = 2),
+  Intercourse = rep(c("Yes", "No"), times = 4),
+  Freq = c(43, 134, 26, 149, 29, 23, 22, 36)
+)
+teen_sex <- to_table(teen_sex)
+use_data(teen_sex)
+
+
+
+
+# 新生运动员毕业比例
+athlete_graduate <- data.frame(
+  Group = c("White female", "White male", "Black female", "Black male"),
+  SampleSize = c(796, 1625, 143, 660),
+  Graduates = c(498, 878, 54, 197)
+)
+use_data(athlete_graduate)
+
+
+
+# 高中毕业生的酒、香烟、大麻的使用情况
+data("marijuana")
+use_data(marijuana)
+
+
+
+
+# 控制蛋白质与死亡率
+albumin <- read.csv("albumin.csv")
+use_data(albumin)
+
+
+
+# 工作满意度与种族、性别、年龄、工作区域的关系的调查
+job_satisfaction_survey <- data.frame(
+  Race = rep(c("White", "Other"), each = 6, times = 14),
+  Age = rep(c("<35", "35-44", ">44"), each = 2, times = 28),
+  Region = rep(c("Northeast", "Mid-Atlantic", "Southern", "Midwest", "Northwest", "Southwest", "Pacific"), each = 24),
+  Satisfied = rep(c("Satisfied", "Not satisfied"), each = 12, times = 7),
+  Gender = rep(c("Male", "Female"), times = 84),
+  Freq = c(
+    288, 60, 224, 35, 337, 70, 38, 19, 32, 22, 21, 15,
+    177, 57, 166, 19, 172, 30, 33, 35, 11, 20, 8, 10,
+    90, 19, 96, 12, 124, 17, 18, 13, 7, 0, 9, 1,
+    45, 12, 42, 5, 39, 2, 6, 7, 2, 3, 2, 1,
+    226, 88, 189, 44, 156, 70, 45, 47, 18, 13, 11, 9,
+    128, 57, 117, 34, 73, 25, 31, 35, 3, 7, 2, 2,
+    285, 110, 225, 53, 324, 60, 40, 66, 19, 25, 22, 11,
+    179, 93, 141, 24, 140, 47, 25, 56, 11, 19, 2, 12,
+    270, 176, 215, 80, 269, 110, 36, 25, 9, 11, 16, 4,
+    180, 151, 108, 40, 136, 40, 20, 16, 7, 5, 3, 5,
+    252, 97, 162, 47, 199, 62, 69, 45, 14, 8, 14, 2,
+    126, 61, 72, 27, 93, 24, 27, 36, 7, 4, 5, 0,
+    119, 62, 66, 20, 67, 25, 45, 22, 15, 10, 8, 6,
+    58, 33, 20, 10, 21, 10, 16, 15, 10, 8, 6, 2
+  )
+)
+job_satisfaction_survey <- to_table(job_satisfaction_survey)
+use_data(job_satisfaction_survey)
+

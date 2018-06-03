@@ -46,11 +46,11 @@
 
 
 
-#' 治疗中心、治疗方案与响应 (Clinic, Treatment and Response)
+#' 治疗中心、治疗方案与响应1 (Clinic, Treatment and Response I)
 #'
-#' @usage data(treatment)
+#' @usage data(treatment1)
 #'
-"treatment"
+"treatment1"
 
 
 
@@ -187,3 +187,99 @@
 #' @usage data(smoking_cd)
 #'
 "smoking_cd"
+
+
+
+#' AZT的使用与AIDS (AZT Use and AIDS)
+#'
+#' @usage data(AZT)
+#'
+"AZT"
+
+
+
+#' 飞行温度与是否受热遇险 (Temperature and Whether at Least One Primary O-ring Suffered Thermal Distress)
+#'
+#' @usage data(temperature_distress)
+#'
+"temperature_distress"
+
+
+
+#' 是否出现驼背与以月计算的年龄 (Whether Kyphosis is Present and the Age in Months)
+#'
+#' @usage data(kyphosis_age)
+#'
+"kyphosis_age"
+
+
+
+#' 绩效工资与种族 (Merit Pay and Race)
+#'
+#' @usage data(merit_pay_race)
+#'
+"merit_pay_race"
+
+
+
+#' 饮酒与Meyers-Briggs人格测验 (Drinking and the Meyers-Briggs Personality Test)
+#'
+#' @usage data(MBdrink)
+#'
+"MBdrink"
+
+
+
+#' 治疗中心、治疗方案与响应2 (Clinic, Treatment and Response II)
+#'
+#' @usage data(treatment2)
+#'
+"treatment2"
+
+
+
+#' 手术后喉咙痛 (Sore Throat after Surgery)
+#'
+#' @usage data(throat)
+#'
+"throat"
+
+
+
+#' 青少年与性行为 (Teenagers and Sexual Intercourse)
+#'
+#' @usage data(teen_sex)
+#'
+"teen_sex"
+
+
+
+#' 新生运动员毕业比例 (Graduation Rates of Freshman Athletes)
+#'
+#' @usage data(athlete_graduate)
+#'
+"athlete_graduate"
+
+
+
+#' 高中毕业生的酒、香烟、大麻的使用情况 (Alcohol, Cigarette, and Marijuana Use for High School Seniors)
+#'
+#' @usage data(marijuana)
+#'
+"marijuana"
+
+
+
+#' 控制蛋白质与死亡率 (Albumin Administering and Mortality)
+#'
+#' @usage data(albumin)
+#'
+"albumin"
+
+
+
+#' 工作满意度与种族、性别、年龄、工作区域的关系的调查 (Survey on  How Job Satisfaction Depends on Race, Gender, Age, and Regional Location)
+#'
+#' @usage data(job_satisfaction_survey)
+#'
+"job_satisfaction_survey"
