@@ -436,7 +436,7 @@ use_data(albumin)
 
 
 # 工作满意度与种族、性别、年龄、工作区域的关系的调查
-job_satisfaction_survey <- data.frame(
+job_satisfaction1 <- data.frame(
   Race = rep(c("White", "Other"), each = 6, times = 14),
   Age = rep(c("<35", "35-44", ">44"), each = 2, times = 28),
   Region = rep(c("Northeast", "Mid-Atlantic", "Southern", "Midwest", "Northwest", "Southwest", "Pacific"), each = 24),
@@ -459,8 +459,8 @@ job_satisfaction_survey <- data.frame(
     58, 33, 20, 10, 21, 10, 16, 15, 10, 8, 6, 2
   )
 )
-job_satisfaction_survey <- to_table(job_satisfaction_survey)
-use_data(job_satisfaction_survey)
+job_satisfaction1 <- to_table(job_satisfaction1)
+use_data(job_satisfaction1)
 
 
 
@@ -601,3 +601,107 @@ incontinent <- read.csv(text = "
   1, 0.7, −10.7, −10, 1, 1.1, −4.5, −15"
 )
 use_data(incontinent)
+
+
+
+# 短吻鳄食物选择
+data(alligators1)
+use_data(alligators1)
+
+
+
+# 是否相信来世1
+data("afterlife", package = "icda")
+afterlife2 <- afterlife
+afterlife2 <- to_table(afterlife2)
+use_data(afterlife2)
+
+
+
+# 政治意识形态与性别和隶属党派
+data(ideology)
+ideology <- to_table(ideology)
+use_data(ideology)
+
+
+
+# 心理健康、SES与生活事件
+impairment <- read.csv(
+  text = "
+  Subject	Impairment	SES	LifeEvents
+  1	Well	1	1
+  21	Mild	1	9
+  2	Well	1	9
+  22	Mild	0	3
+  3	Well	1	4
+  23	Mild	1	3
+  4	Well	1	3
+  24	Mild	1	1
+  5	Well	0	2
+  25	Moderate	0	0
+  6	Well	1	0
+  26	Moderate	1	4
+  7	Well	0	1
+  27	Moderate	0	3
+  8	Well	1	3
+  28	Moderate	0	9
+  9	Well	1	3
+  29	Moderate	1	6
+  10	Well	1	7
+  30	Moderate	0	4
+  11	Well	0	1
+  31	Moderate	0	3
+  12	Well	0	2
+  32	Impaired	1	8
+  13	Mild	1	5
+  33	Impaired	1	2
+  14	Mild	0	6
+  34	Impaired	1	7
+  15	Mild	1	3
+  35	Impaired	0	5
+  16	Mild	0	1
+  36	Impaired	0	4
+  17	Mild	1	8
+  37	Impaired	0	4
+  18	Mild	1	2
+  38	Impaired	1	8
+  19	Mild	0	5
+  39	Impaired	0	8
+  20	Mild	1	5
+  40	Impaired	0	9",
+  sep = "\t"
+)
+impairment <- arrange(impairment, Subject)
+use_data(impairment)
+
+
+
+
+# 怀孕老鼠胎儿的发育毒性研究
+response_level <- c("Non-live", "Malformation", "Normal")
+toxicity <- data.frame(
+  Concentration = c(0, 62.5, 125, 250, 500),
+  Response = factor(rep(response_level, each = 5), levels = response_level),
+  Freq = c(15, 17, 22, 38, 144, 1, 0, 7, 59, 132, 281, 225, 283, 202, 9)
+)
+toxicity <- to_table(toxicity)
+use_data(toxicity)
+
+
+
+# 工作满意度调查2
+income_num <- c(3, 10, 20, 35)
+income_level <- c("<5000", "5000-15000", "15000-25000", ">25000")
+income_recode <- paste0(paste(income_num, "='", income_level, "'", sep = ""), collapse = "; ")
+js_level <- c("Very Dissatisfied", "A Little Satisfied", "Moderately Satisfied", "Very Satisfied")
+js_recode <- paste0(paste(c(1, 3:5), "='", js_level, "'", sep = ""), collapse = "; ")
+data(jobsatisfaction)
+job_satisfaction2 <- jobsatisfaction
+job_satisfaction2 <- job_satisfaction2 %>%
+  mutate(
+    Gender = car::recode(Gender, "'M'='Male'; 'F'='Female'"),
+    Income = factor(car::recode(Income, income_recode), levels = income_level),
+    JobSatisfaction = factor(car::recode(JobSat, js_recode), levels = js_level)
+  ) %>%
+  select(-JobSat)
+use_data(job_satisfaction2)

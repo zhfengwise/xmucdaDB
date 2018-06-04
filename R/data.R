@@ -278,11 +278,11 @@
 
 
 
-#' 工作满意度与种族、性别、年龄、工作区域的关系的调查 (Survey on  How Job Satisfaction Depends on Race, Gender, Age, and Regional Location)
+#' 工作满意度调查1 (Survey on Job Satisfaction I)
 #'
-#' @usage data(job_satisfaction_survey)
+#' @usage data(job_satisfaction1)
 #'
-"job_satisfaction_survey"
+"job_satisfaction1"
 
 
 
@@ -386,3 +386,48 @@
 
 
 
+#' 短吻鳄食物选择1 (Alligator Food Choice I)
+#'
+#' @usage data(alligators1)
+#'
+"alligators1"
+
+
+
+#' 是否相信来世2 (Belief in Afterlife II)
+#'
+#' @usage data(afterlife2)
+#'
+"afterlife2"
+
+
+
+#' 政治意识形态、性别与隶属党派 (Political Ideology, Gender and Party Affiliation)
+#'
+#' @usage data(ideology)
+#'
+"ideology"
+
+
+
+#' 心理健康、SES与生活事件 (Mental Impairment, SES and Life Events)
+#'
+#' @usage data(impairment)
+#'
+"impairment"
+
+
+
+#' 怀孕老鼠与发育毒性研究 (Pregnant Mice and Developmental Toxicity Study)
+#'
+#' @usage data(toxicity)
+#'
+"toxicity"
+
+
+
+#' 工作满意度调查2 (Survey on Job Satisfaction II)
+#'
+#' @usage data(job_satisfaction2)
+#'
+"job_satisfaction2"
