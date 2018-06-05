@@ -23,7 +23,9 @@ find_data_by_var(pattern, package = "xmucdaDB", ignore.case = TRUE,
 \item{package}{a character vector giving the package(s) to look in for data sets,
   or NULL (for looking for dataset in all data sets).
 
-  By default, this two functions would find dataset in \code{xmucdaDB} package.}
+  By default, this two functions would find dataset in \code{xmucdaDB} package.
+
+  If you want to find data set from all installed package, set \code{package = .packages(all.available = TRUE)}}
 
 \item{simplify}{a logical. If TRUE (default), function would return
 the dataset name only. If FALSE, it would return a \code{data.frame}
@@ -42,7 +44,7 @@ find_data_by_title("癌", simplify = FALSE)
 # 描述中包含"癌"且有变量名包含"treatment"的数据集
 intersect(
   find_data_by_title("癌"),
-  find_data_by_var("treatment", ignore.case = TRUE)
+  find_data_by_var("treatment")
 )
 
 }
