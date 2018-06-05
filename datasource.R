@@ -85,8 +85,8 @@ use_data(smoking_lungcancer)
 
 # 家庭收入与家庭幸福
 data("happiness")
-happiness <- to_table(happiness)
-use_data(happiness)
+happiness1 <- to_table(happiness)
+use_data(happiness1)
 
 
 
@@ -705,3 +705,128 @@ job_satisfaction2 <- job_satisfaction2 %>%
   ) %>%
   select(-JobSat)
 use_data(job_satisfaction2)
+
+
+
+# 短吻鳄食物选择2
+data("alligators2")
+alligators2 <- rename(alligators2, Freq = Count)
+alligators2 <- to_table(alligators2)
+use_data(alligators2)
+
+
+
+
+# 婚姻幸福与家庭收入
+marital_happiness <- data.frame(
+  Income = rep(c("Below average income", "Average income", "Above average income"), each = 3),
+  Happniess = rep(c("Not happy", "Pretty happy", "Very happy"), times = 3),
+  Freq = c(6, 43, 75, 6, 113, 178, 6, 57, 117)
+)
+marital_happiness <- to_table(marital_happiness)
+use_data(marital_happiness)
+
+
+
+# 小细胞肺癌治疗
+response_level <- c("Progressive Disease", "No Change", "Partial Remission", "Complete Remission")
+lungcancer_treatment <- data.frame(
+  Treatment = rep(c("Sequential", "Alternating"), each = 8),
+  Gender = rep(c("Male", "Female"), each =4, times = 2),
+  Response = factor(rep(response_level, times = 4), levels = response_level),
+  Freq = c(28, 45, 29, 26, 4, 12, 5, 2, 41, 44, 20, 20, 12, 7, 3, 1)
+)
+lungcancer_treatment <- to_table(lungcancer_treatment)
+use_data(lungcancer_treatment)
+
+
+
+# 幸福与宗教参与
+happiness_level <- c("Not Too Happy", "Pretty Happy", "Very Happy")
+religion_level <- c(
+  "At most several times a year",
+  "Once a month to several times a year",
+  "Every week to several times a week"
+)
+happiness2 <- data.frame(
+  Happiness = factor(rep(happiness_level, times = 3), levels = happiness_level),
+  Religion = factor(rep(religion_level, each = 3), levels = religion_level),
+  Freq = c(189, 908, 382, 53, 311, 180, 46, 335, 294)
+)
+happiness2 <- to_table(happiness2)
+use_data(happiness2)
+
+
+
+# LDL胆固醇研究
+cholesterol_level <- c("<=3.4", "3.4-4.1", "4.1-4.9", ">4.9")
+cholesterol <- data.frame(
+  Group = rep(c("Control", "Treatment"), each = 16),
+  Beginning = factor(rep(cholesterol_level, each = 4, times = 2), levels = cholesterol_level),
+  Ending = factor(rep(cholesterol_level, times = 8), levels = cholesterol_level),
+  Freq = c(
+    18, 8, 0, 0, 16, 30, 13, 2, 0, 14, 28, 7, 0, 2, 15, 22,
+    21, 4, 2, 0, 17, 25, 6, 0, 11, 35, 36, 6, 1, 5, 14, 12
+  )
+)
+cholesterol <- to_table(cholesterol)
+use_data(cholesterol)
+
+
+
+# 汽车事故与安全带
+injury_level <- c(
+  "Not injured",
+  "Injured but not transported by emergency medical services",
+  "Injured and transported by emergency medical services but not hospitalized",
+  "Injured and hospitalized but did not die",
+  "Injured and died"
+)
+accident_seatbelt <- data.frame(
+  Gender = rep(c("Female", "Male"), each = 20),
+  Location = rep(c("Urban", "Rural"), each = 10, times = 2),
+  SeatBelt = rep(c("No", "Yes"), each = 5, times = 4),
+  Injury = factor(rep(injury_level, times = 8), levels = injury_level),
+  Freq = c(
+    7287, 175, 720, 91, 10,
+    11587, 126, 577, 48, 8,
+    3246, 73, 710, 159, 31,
+    6134, 94, 564, 82, 17,
+    10381, 136, 566, 96, 14,
+    10969, 83, 259, 37, 1,
+    6123, 141, 710, 188, 45,
+    6693, 74, 353, 74, 12
+  )
+)
+accident_seatbelt <- to_table(accident_seatbelt)
+use_data(accident_seatbelt)
+
+
+
+
+# 工作满意度调查3
+income_level <- c("<5000", "5000-15000", "15000-25000", ">25000")
+js_level <- c("Very Dissatisfied", "A Little Satisfied", "Moderately Satisfied", "Very Satisfied")
+job_satisfaction3 <- data.frame(
+  JobSatisfaction = factor(rep(js_level, times = 8), levels = js_level),
+  Gender = rep(c("Female", "Male"), each = 16),
+  Income = factor(rep(income_level, each = 4, times = 2), levels = income_level),
+  Freq = c(
+    3, 10, 30, 27, 7, 8, 45, 39, 8, 7, 46, 51, 4, 2, 28, 47,
+    1, 4, 9, 9, 1, 2, 37, 29, 0, 10, 35, 39, 7, 14, 69, 109
+  )
+)
+job_satisfaction3 <- to_table(job_satisfaction3)
+use_data(job_satisfaction3)
+
+
+
+# 幸福感与婚姻状态
+happiness_level <- c("Not too happy", "Pretty happy", "Very happy")
+happiness3 <- data.frame(
+  Happiness = factor(rep(happiness_level, times = 2), levels = happiness_level),
+  MaritalStatus = rep(c("Married", "Divorced"), each = 3),
+  Freq = c(67, 650, 555, 65, 276, 93)
+)
+happiness3 <- to_table(happiness3)
+use_data(happiness3)

@@ -64,9 +64,9 @@
 
 #' 家庭收入与幸福感 (A Person’s Perceived Happiness with Their Family Income)
 #'
-#' @usage data(happiness)
+#' @usage data(happiness1)
 #'
-"happiness"
+"happiness1"
 
 
 
@@ -431,3 +431,67 @@
 #' @usage data(job_satisfaction2)
 #'
 "job_satisfaction2"
+
+
+
+#' 短吻鳄食物选择2 (Alligator Food Choice II)
+#'
+#' @usage data(alligators2)
+#'
+"alligators2"
+
+
+
+#' 婚姻幸福与家庭收入 (Marital Happiness and Family Income)
+#'
+#' @usage data(marital_happiness)
+#'
+"marital_happiness"
+
+
+
+#' 小细胞肺癌治疗 (Small-cell Lung Cancer Treatment)
+#'
+#' @usage data(lungcancer_treatment)
+#'
+"lungcancer_treatment"
+
+
+
+#' 幸福与宗教参与 (Happiness and Religion Attendance)
+#'
+#' @usage data(happiness2)
+#'
+"happiness2"
+
+
+
+#' LDL胆固醇研究 (LDL Cholesterol Study)
+#'
+#' @usage data(cholesterol)
+#'
+"cholesterol"
+
+
+
+#' # 汽车事故与安全带 (Auto Accidents and Seat Belts)
+#'
+#' @usage data(accident_seatbelt)
+#'
+"accident_seatbelt"
+
+
+
+#' 工作满意度调查3 (Survey on Job Satisfaction III)
+#'
+#' @usage data(job_satisfaction3)
+#'
+"job_satisfaction3"
+
+
+
+#' 幸福感与婚姻状态 (Happiness and Marital Status)
+#'
+#' @usage data(happiness3)
+#'
+"happiness3"
